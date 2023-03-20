@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock title %}
+
+
+
+{% block body %}
+ <h3 class="text-center bg-danger text-white"><span>STUDENT MANAGEMENT SYSTEM IS THE BEST WAY OF MANAGING THE RECORDS OF STUDENTS </span> </h3>
+  <h4>The project was done by Arul joshua and Ashok Kumar from Jyothy Institute of Technology</h4>
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    {{message}}
+
+
+</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+  {% endblock body %}
